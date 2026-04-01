@@ -1,7 +1,10 @@
 import "modern-normalize";
 import "./globals.css";
+import styles from "./layout.module.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Header from "@/components/Header/Header";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,12 +23,25 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  sidebar,
 }: Readonly<{
   children: React.ReactNode;
+  sidebar: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <aside className={styles.layoutSideBar}>{sidebar}</aside>
+        <div className={styles.layoutContent}>
+          <header className={styles.layoutHeader}>
+            <Header />
+            <nav className={styles.layoutNav}>
+              <Breadcrumbs />
+            </nav>
+          </header>
+          <main className={styles.layoutMain}>{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
