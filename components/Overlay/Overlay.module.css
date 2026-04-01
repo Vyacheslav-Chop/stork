@@ -1,0 +1,34 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-overlay-bg);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+}
+
+.backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalWrap {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.backdrop.open .modalWrap {
+  transform: translateX(0);
+}

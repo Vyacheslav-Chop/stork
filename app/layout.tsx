@@ -1,5 +1,6 @@
 import "modern-normalize";
 import "./globals.css";
+import './palette.css';
 import styles from "./layout.module.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -24,9 +25,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   sidebar,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
   sidebar: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
@@ -41,6 +44,7 @@ export default function RootLayout({
           </header>
           <main className={styles.layoutMain}>{children}</main>
         </div>
+        <div className={styles.layoutModalWrap}>{modal}</div>
       </body>
     </html>
   );
