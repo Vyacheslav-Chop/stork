@@ -23,12 +23,3 @@
   opacity: 1;
   visibility: visible;
 }
-
-.modalWrap {
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.backdrop.open .modalWrap {
-  transform: translateX(0);
-}

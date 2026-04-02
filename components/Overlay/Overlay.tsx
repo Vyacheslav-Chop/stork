@@ -36,7 +36,7 @@ const Overlay = ({ children, onClose, isOpen }: OverlayProps) => {
       role="dialog"
       aria-modal="true"
     >
-      <div className={styles.modalWrap}>{children}</div>
+      {children}
     </div>,
     document.body,
   );
