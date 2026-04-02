@@ -3,6 +3,7 @@ import styles from "./Menu.module.css";
 import Logo from "../ui/Logo/Logo";
 import Button from "../ui/Button/Button";
 import Icon from "../ui/Icon/Icon";
+import PanelFooter from "../PanelFooter/PanelFooter";
 
 type MenuProps = {
   onClose: () => void;
@@ -23,6 +24,7 @@ const Menu = ({ onClose }: MenuProps) => {
         </Button>
       </div>
       <Nav onClose={onClose} />
+      <PanelFooter />
     </div>
   );
 };
