@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Icon from "../Icon/Icon";
-import styles from "./Logo.module.css";
 
 type LogoProps = {
   width: number;
@@ -9,13 +8,8 @@ type LogoProps = {
 
 const Logo = ({ width, height }: LogoProps) => {
   return (
-    <Link href="/" className={styles.logoLink}>
-      <Icon
-        className={styles.logoLinkIcon}
-        width={width}
-        height={height}
-        name="logo-stork"
-      />
+    <Link href="/">
+      <Icon width={width} height={height} name="logo-stork" />
     </Link>
   );
 };
