@@ -1,0 +1,29 @@
+.menuWrap {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--background);
+
+  width: 300px;
+  height: 100vh;
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+
+.closeBtn {
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtnIcon {
+  fill: #000000;
+  stroke-width: 1px;
+  stroke: #000000;
+}

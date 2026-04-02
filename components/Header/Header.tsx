@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import styles from "./Header.module.css";
-import Link from "next/link";
 import Overlay from "../Overlay/Overlay";
 import Menu from "../Menu/Menu";
 import Icon from "../ui/Icon/Icon";
 import Button from "../ui/Button/Button";
+import Logo from "../ui/Logo/Logo";
+import Drawer from "../ui/Drawer/Drawer";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -16,14 +17,7 @@ const Header = () => {
 
   return (
     <div className={styles.headerContainer}>
-      <Link href="/" className={styles.logoLink}>
-        <Icon
-          className={styles.logoLinkIcon}
-          width={84}
-          height={36}
-          name="logo-stork"
-        />
-      </Link>
+      <Logo width={84} height={36} />
 
       <Button className={styles.menuBtn} onClick={open} type="button">
         <Icon
@@ -35,7 +29,9 @@ const Header = () => {
       </Button>
 
       <Overlay onClose={close} isOpen={openMenu}>
-        <Menu />
+        <Drawer isOpen={openMenu}>
+          <Menu onClose={close} />
+        </Drawer>
       </Overlay>
     </div>
   );

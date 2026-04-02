@@ -59,7 +59,7 @@
   --font-lato: "Lato", Arial, Helvetica, sans-serif;
   --font-comfortaa: "Comfortaa", cursive, sans-serif;
 
-/* main colors */
+  /* main colors */
 
   --background: #ffffff;
   --foreground: #000000;
@@ -99,4 +99,9 @@ button {
   color: var(--foreground);
   cursor: pointer;
   border: none;
+}
+
+ul,
+ol {
+  list-style: none;
 }
