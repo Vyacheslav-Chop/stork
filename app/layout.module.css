@@ -15,3 +15,14 @@
     padding: 0 32px;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .layoutHeader {
+    display: none;
+  }
+
+  .layoutContent {
+    max-width: 1440px;
+    padding: 0 32px;
+  }
+}

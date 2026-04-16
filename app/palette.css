@@ -1,5 +1,8 @@
 :root {
-  /* backgrounds */
+  /* text colors */
+  --color-text-secondary: #7f7f7f;
 
+  /* backgrounds */
   --color-overlay-bg: rgba(0, 0, 0, 0.5);
+  --color-active-bg: #fff4f6;
 }

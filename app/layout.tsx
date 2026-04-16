@@ -1,6 +1,6 @@
 import "modern-normalize";
 import "./globals.css";
-import './palette.css';
+import "./palette.css";
 import styles from "./layout.module.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -38,10 +38,10 @@ export default function RootLayout({
         <div className={styles.layoutContent}>
           <header className={styles.layoutHeader}>
             <Header />
-            <nav className={styles.layoutNav}>
-              <Breadcrumbs />
-            </nav>
           </header>
+          <nav className={styles.layoutNav}>
+            <Breadcrumbs />
+          </nav>
           <main className={styles.layoutMain}>{children}</main>
         </div>
         <div className={styles.layoutModalWrap}>{modal}</div>
