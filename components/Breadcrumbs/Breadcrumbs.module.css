@@ -1,0 +1,48 @@
+.breadcrumbs {
+  padding: 24px 12px 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.homeLink {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.separatorWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  transform: rotate(-90deg);
+  fill: #000000;
+  stroke-width: 1px;
+  stroke: #000000;
+}
+
+.currentLabel {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumbs {
+    padding: 24px 0px 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .homeLink {
+    font-size: 14px;
+  }
+  .currentLabel {
+    font-size: 14px;
+  }
+}

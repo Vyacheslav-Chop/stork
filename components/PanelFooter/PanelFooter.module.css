@@ -1,8 +1,18 @@
 .panelFooterWrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 0 24px;
+}
+
+.panelFooterWrap::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .userInfo {
